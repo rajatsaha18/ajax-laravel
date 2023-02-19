@@ -16,7 +16,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Product Price</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="product price"/>
+                        <input type="text" class="form-control" name="price" id="price" placeholder="product price"/>
                     </div>
                 </div>
                 <div class="modal-footer">
