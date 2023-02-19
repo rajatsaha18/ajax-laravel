@@ -22,6 +22,10 @@
                 method:"post",
                 data:{name:name, price:price},
                 success:function(res){
+                    if(res.status == 'success'){
+                        $("#addModal").modal('hide');
+                        $("#addProductForm")[0].reset();
+                    }
 
                 },
                 error:function(err){
