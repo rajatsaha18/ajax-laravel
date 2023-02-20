@@ -17,13 +17,13 @@ class ProductController extends Controller
     {
         $request->validate(
             [
-                'up_name'  => 'required|unique:products',
-                'up_price' => 'required',
+                'name'  => 'required|unique:products',
+                'price' => 'required',
             ],
             [
-                'up_name.required'     => 'Name is Required',
-                'up_name.unique'       => 'Product Already Exists',
-                'up_price.required'    => 'Price is Required',
+                'name.required'     => 'Name is Required',
+                'name.unique'       => 'Product Already Exists',
+                'price.required'    => 'Price is Required',
             ],
         );
         $product = new Product();
@@ -57,6 +57,7 @@ class ProductController extends Controller
     public function deleteProduct(Request $request)
     {
         Product::find($request->product_id)->delete();
+
         return response()->json([
             'status' => 'success',
         ]);
